@@ -1,0 +1,16 @@
+<div id="app">
+  <div>
+    {{ message }}
+  </div>
+  <input v-model="message">
+
+  <h2>Reviews</h2>
+  <ul>
+    <li v-for="review in reviews" v-if="isPositive(review)">{{ review }}</li>
+  </ul>
+
+  <h4>Add a review</h4>
+
+  <input v-model="newReview">
+  <button v-on:click="addReview">Add review</button>
+</div>
